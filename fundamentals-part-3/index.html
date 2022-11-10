@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fundamentals part 3</title>
+    </head>
+
+    <body>
+        <script>
+            let q1 = n => n + 7;
+            console.log(q1(3));
+
+            let q2 = (a,b) => a * b;
+            console.log(q2(2,3));
+
+            let q3 = s => {
+                s = s.toLowerCase();
+                let b = s.charAt(0).toUpperCase();
+                s = b + s.slice(1);
+                return s;
+
+            }; 
+            console.log(q3('teSt')); 
+
+            let q4 = x => {
+                let y = x.length;
+                return x.charAt(y-1);
+            };
+            console.log(q4("helloX"));
+
+        </script>
+    </body>
+</html>

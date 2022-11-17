@@ -40,6 +40,8 @@ function game(num){
     console.log(`You won: ${counter}`);
 }
 
-game(3);
+const playerChoice = Array.from(document.querySelectorAll('div.Player.choice'));
+
+playerChoice.forEach(event => console.log(event.value));
 
 

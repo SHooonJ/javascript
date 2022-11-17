@@ -3,16 +3,16 @@ function getComputerChoice(){
     const answer = document.querySelector('.Computer .Result');
     switch(ranNum){
         case 0: answer.textContent = "rock";
-                return "rock";
+        return "rock";
         break;
         case 1: answer.textContent = "paper";
-                return "paper";
+        return "paper";
         break;
         case 2: answer.textContent = "scissors";
-                return "scissors";
+        return "scissors";
         break;
         default: answer.textContent = "error";
-                return "error";
+        return "error";
     }
     return;
 }
@@ -24,8 +24,8 @@ function playRound(playerSelection, computerSelection){
         return "tie";
     }
     if((playerSelection === "rock" && computerSelection === "scissors")
-        ||(playerSelection === "scissors" && computerSelection === "paper")
-        ||(playerSelection === "paper" && computerSelection === "rock")){
+    ||(playerSelection === "scissors" && computerSelection === "paper")
+    ||(playerSelection === "paper" && computerSelection === "rock")){
         score.textContent = "win";
         return "win";
     }
@@ -36,9 +36,12 @@ function playRound(playerSelection, computerSelection){
 function display(){
     const result = document.querySelector('.Player .Result');
     result.textContent = `${this.value}`;
-    playRound(this.value, getComputerChoice());
+    let points = playRound(this.value, getComputerChoice());
+    if(points === "win"){score++;}
+    console.log(score);
     return;
 }
+let score = 0;
 
 const playerChoice = Array.from(document.querySelectorAll('.Player .choice'));
 playerChoice.forEach(element => element.addEventListener('click', display));

@@ -5,6 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-image: linear-gradient(140deg, black, rgb(136, 136, 177), red);
 }
 
 h1{
@@ -17,22 +18,39 @@ h1{
     width: 80vw;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.Player{
-    width: auto;
-}
 
-.Computer{
-    margin-left: auto;
+
+.Computer.Result, .Display .Player{
+    width: 200px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .Score{
     width: 100%;
     text-align: center;
+    position: relative;
+    bottom: 45vh;
+    font-size: 60px;
+}
+
+.Picture{
+    width: 80vw;
+    display:flex;
+    justify-content: space-around;
 }
 
 .Picture img{
+    margin: 0;
     width: 200px;
     height: 200px;
 }
+
+
+
+
+
+

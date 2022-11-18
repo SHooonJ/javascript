@@ -1,14 +1,18 @@
 function getComputerChoice(){
     let ranNum = Math.floor((Math.random()*10)%3);
     const answer = document.querySelector('.Computer.Result');
+    const compImg = document.querySelector('.Picture .Computer');
     switch(ranNum){
         case 0: answer.textContent = "rock";
+                compImg.src = "./images/rock.jpeg";
         return "rock";
         break;
         case 1: answer.textContent = "paper";
+                compImg.src = "./images/paper.jpeg";
         return "paper";
         break;
         case 2: answer.textContent = "scissors";
+                compImg.src = "./images/scissors.png";
         return "scissors";
         break;
         default: answer.textContent = "error";

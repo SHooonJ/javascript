@@ -37,11 +37,19 @@ function playRound(playerSelection, computerSelection){
     return "lose";
 }
 
+function getPlayerImg(choice){
+    const playerImg = document.querySelector('.Picture .Player');
+    if(choice === 'rock'){playerImg.src = "./images/rock.jpeg";}
+    else if(choice === 'scissors'){playerImg.src = "./images/scissors.png";}
+    else if(choice === 'paper'){playerImg.src = "./images/paper.jpeg";}
+    return;
+}
+
 function display(){
     const result = document.querySelector('.Player .Result');
     result.textContent = `${this.value}`;
-    let points = playRound(this.value, getComputerChoice());
-    if(points === "win"){score++;}
+    getPlayerImg(this.value);
+    playRound(this.value, getComputerChoice());
     return;
 }
 // let score = 0;

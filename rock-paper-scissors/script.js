@@ -1,6 +1,6 @@
 function getComputerChoice(){
     let ranNum = Math.floor((Math.random()*10)%3);
-    const answer = document.querySelector('.Computer .Result');
+    const answer = document.querySelector('.Computer.Result');
     switch(ranNum){
         case 0: answer.textContent = "rock";
         return "rock";
@@ -38,10 +38,9 @@ function display(){
     result.textContent = `${this.value}`;
     let points = playRound(this.value, getComputerChoice());
     if(points === "win"){score++;}
-    console.log(score);
     return;
 }
-let score = 0;
+// let score = 0;
 
 const playerChoice = Array.from(document.querySelectorAll('.Player .choice'));
 playerChoice.forEach(element => element.addEventListener('click', display));
